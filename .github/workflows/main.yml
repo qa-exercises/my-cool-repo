@@ -1,0 +1,31 @@
+name: My Super Awesome Workflow
+
+on:
+  push: 
+    branches:
+      - main
+
+jobs:
+  test-build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Start CI/CD process 
+        run: echo "Yo yo yo, the workflow is starting!"
+
+      - name: Get code from repository
+        uses: actions/checkout@v4
+    
+      - name: Test step
+        run: |
+          echo "The tests are running..."
+          echo "All the tests passed!"
+
+      - name: Build step
+        run: |
+          echo "Building the app..."
+
+      - name: Deploy step
+        run: |
+          echo "Deploying the app..."
+          
